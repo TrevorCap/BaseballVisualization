@@ -44,8 +44,10 @@ html, body
   background-color: white;
 }
 .navbar {
-  background-color: whitesmoke;
   margin-bottom: 1%;
+}
+.bg-light {
+  background-color: #ffffff !important;
 }
 
 
@@ -53,14 +55,12 @@ html, body
     max-width:60em;
     padding: 0.2em;
 }
-
 .jumbotron {
   width: 80%;
   background: #ffffff;
   /* condenses jumbotron */
   padding: 1rem;
 }
-
 .welcome {
   /* condenses welcome row */
   width: 100%;
@@ -99,14 +99,9 @@ html, body
   font-size: 350%;
   /* vertical, horizontal, width, color of shadow */
   text-shadow: 1px 1px 15px rgb(255, 255, 255);
-}
-.container padding hr {
-  border-top: 2px solid #8f8f8f;
-  width: 95%;
-  margin-top: .3rem;
   margin-bottom: 1rem;
-  color: #ffffff;
 }
+
 
 #map {
     width: 120px;
