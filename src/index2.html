@@ -33,48 +33,41 @@
   </head>
   <body>
 
-  <!-- Navigation -->
-<!-- navbar changes at medium size, light background, dark navigation text, sticky navigation instead of fixed -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-    <!-- fluid takes up 100% of screen -->
     <div class="container">
-      <!-- adds logo -->
-      <a class="navbar-brand" href="index.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Major_League_Baseball_logo.svg/320px-Major_League_Baseball_logo.svg.png" alt="MLB logo"></a>
-      <!-- navigation button toggle switch, opens and collapses -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+      <a class="navbar-brand" href="index.html"><img src="../src/assets/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" 
       aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
-        <!-- add icon with lines rather than just empty cube -->
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- adding class for collapsable navbar -->
+      <!-- Centers nav-items -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <!-- ml-auto pushes navigation at full width to right side -->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/about.html">About</a>
+            <a href="about.html" class="nav-link">About</a>
+          </li> 
+          <li class="nav-item">
+            <a href="#" class="nav-link">Player Birth Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Player Birth Map</a>
+            <a href="#" class="nav-link">Player Death Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#team">Player Death Map</a>
+            <a href="#" class="nav-link">Player Pie Chart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Player Pie Chart</a>
-            <a href="#opening"></a>
-          </li>
+              <a href="#" class="nav-link">Sources</a>
+            </li>
         </ul>
       </div>
     </div>
   </nav>
+  
 
-  <!--- Meet The Team Section -->
-  <div class="container-fluid padding">
+  <!--- Welcome -->
+  <div class="container-fluid jumbotron padding">
     <div class="row welcome text-center padding">
-      <div class="col-12">
-        <h1 class="display-4">MLB Player Origins</h1>
-      </div>
-      <hr>
       <div class="col-12">
         <p class="lead">Welcome to the MLB Player Origins Website! Here you will find two interactive maps and a pie chart that
           help visualize where MLB Players come from. The first map shows all of the birth places of every MLB player since it was first established.
@@ -90,7 +83,8 @@
 
 <div id="map-holder">
   <div class="container padding">
-    <div class="row">
+    <div class="row justify-content-center padding">
+      <h1 class="display-2">Player Birth Map</h1>   
       <div id="map"></div>
     </div>
   </div>

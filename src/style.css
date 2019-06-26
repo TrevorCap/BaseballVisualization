@@ -1,35 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Playball|Source+Serif+Pro&display=swap');
+/* font-family: 'Lobster', cursive;
+font-family: 'Playball', cursive;
+font-family: 'Source Serif Pro', serif; */
 
-
-/*---Style Navigation Bar --*/
-/* . before navbar because its a class */
-.navbar {
-  /* gives words more space in navbar, 1rem = 16px */
-  padding: .8rem;
-}
-/* calling ul class navbar-nav, then li within that ul */
-.navbar-nav li {
-  /* gives more spacing inbetween our list items */
-  padding-right: 20px;
-}
-.nav-link {
-  font-size: 1.1em !important;
-}
-.navbar-brand img{
-  height: 75px;
-  width: auto;
-}
-
-
-#map
-{
-    width: 120px;
-    height: 700px;
-    min-height: 100%;
-    min-width: 100%;
-    display: block;
-    
-}
 
 html, body
 {
@@ -37,32 +10,65 @@ html, body
     background-image: url('../src/assets/background.png')
 }
 
-#map-holder{
-    height: 100%;
-    
+
+/* NAVBAR */
+.navbar-brand img{
+  height: 70px;
+  width: 350px;
+  float: left;
+}
+.navbar-brand {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 35px;
+  color: rgb(205, 0, 1) !important;
+  transition: all 0.5s ease-in
+}
+.navbar-brand:hover {
+  color: rgb(0, 0, 85) !important;
+}
+.nav-link {
+  font-size: 16px;
+  margin: 15px;
+  color: rgb(0, 0, 85) !important;
+  font-family: 'Source Serif Pro', serif;
+  transition: all 0.5s ease-in;
+}
+.nav-link:hover {
+  color: rgb(205, 0, 1) !important;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar .navbar-toggler {
+  margin-right: 30px;
+  background-color: white;
+}
+.navbar {
+  background-color: whitesmoke;
+  margin-bottom: 1%;
 }
 
-.fill
-{
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-}
 
 .container {
     max-width:60em;
     padding: 0.2em;
 }
 
+.jumbotron {
+  width: 80%;
+  background: #ffffff;
+  /* condenses jumbotron */
+  padding: 1rem;
+}
+
 .welcome {
   /* condenses welcome row */
-  width: 75%;
+  width: 100%;
   /* centers welcome row */
   margin: 0 auto;
   padding-top: 2rem;
   font-family: 'Lobster', cursive;
-  color: rgb(0, 0, 82);
+  color: rgb(0, 0, 85);
   text-align: center;
   font-size: 2.1em !important;
   font-weight: 500;
@@ -84,6 +90,47 @@ html, body
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 15px rgb(255, 255, 255);
 }
-/* font-family: 'Lobster', cursive;
-font-family: 'Playball', cursive;
-font-family: 'Source Serif Pro', serif; */
+
+/* Player Birth Map */
+.container h1 {
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  color: rgb(0, 0, 85);
+  font-size: 350%;
+  /* vertical, horizontal, width, color of shadow */
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
+}
+.container padding hr {
+  border-top: 2px solid #8f8f8f;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+#map {
+    width: 120px;
+    height: 700px;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    border: solid;
+    border-color: whitesmoke;
+}
+#map-holder {
+    height: 100%;
+}
+.fill {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+
+ /*--- Bootstrap Padding Fix --*/
+ [class*="col-"] {
+  padding: 1rem;
+}
