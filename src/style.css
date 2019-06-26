@@ -7,28 +7,34 @@ font-family: 'Source Serif Pro', serif; */
 html, body
 {
     height: 100%;
-    background-image: url('../src/assets/background.png')
+    background-image: url('../src/assets/background\ copy.png')
 }
 
 
 /* NAVBAR */
+.navbar-nav > li{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .navbar-brand img{
   height: 70px;
   width: 350px;
-  float: left;
+  padding-left: 15px;
 }
 .navbar-brand {
   font-family: 'Source Serif Pro', serif;
   font-size: 35px;
   color: rgb(205, 0, 1) !important;
-  transition: all 0.5s ease-in
+  transition: all 0.5s ease-in;
 }
 .navbar-brand:hover {
   color: rgb(0, 0, 85) !important;
 }
 .nav-link {
-  font-size: 16px;
-  margin: 15px;
+  font-size: 18px;
+  font-weight: bold;
   color: rgb(0, 0, 85) !important;
   font-family: 'Source Serif Pro', serif;
   transition: all 0.5s ease-in;
@@ -104,7 +110,7 @@ html, body
 
 
 #map {
-    width: 120px;
+    width: 150px;
     height: 700px;
     min-height: 100%;
     min-width: 100%;
@@ -123,9 +129,10 @@ html, body
 }
 
 
-
-
- /*--- Bootstrap Padding Fix --*/
- [class*="col-"] {
-  padding: 1rem;
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: rgb(0, 0, 85);
+  font-weight: bold;
+  background: #ffffff;
 }
