@@ -1,10 +1,81 @@
-body {
-  padding: 0;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css?family=Lobster|Playball|Source+Serif+Pro&display=swap');
+
+
+/*---Style Navigation Bar --*/
+/* . before navbar because its a class */
+.navbar {
+  /* gives words more space in navbar, 1rem = 16px */
+  padding: .8rem;
+}
+/* calling ul class navbar-nav, then li within that ul */
+.navbar-nav li {
+  /* gives more spacing inbetween our list items */
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+.navbar-brand img{
+  height: 75px;
+  width: auto;
 }
 
-#map,
-body,
-html {
-  height: 100%;
+
+#map
+{
+    width: 120px;
+    height: 700px;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    
 }
+
+html, body
+{
+    height: 100%;
+}
+
+#map-holder{
+    height: 100%;
+    
+}
+
+.fill
+{
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.container {
+    max-width:60em;
+    padding: 0.2em;
+}
+
+.welcome {
+  /* condenses welcome row */
+  width: 75%;
+  /* centers welcome row */
+  margin: 0 auto;
+  padding-top: 2rem;
+  font-family: 'Lobster', cursive;
+  color: rgb(0, 0, 82);
+  text-align: center;
+  font-size: 2.1em !important;
+}
+/* stylizes horizontal line */
+.welcome hr {
+  border-top: 2px solid #8f8f8f;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+.welcome img {
+  height: 75px;
+  width: 100px;
+}
+/* font-family: 'Lobster', cursive;
+font-family: 'Playball', cursive;
+font-family: 'Source Serif Pro', serif; */
