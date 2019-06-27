@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>MLB Player Origins</title>
 
+    <!-- Favicon -->
+    <link href="../src/assets/baseball-favicon.ico" rel="icon" type="image/x-icon" />
+
     <!-- Leaflet JS & CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -48,10 +51,10 @@
             <a href="#" class="nav-link">About</a>
           </li> 
           <li class="nav-item">
-            <a href="#" class="nav-link">Player Birth Map</a>
+            <a href="#section-birthmap" class="nav-link">Player Birth Map</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Player Death Map</a>
+            <a href="#section-deathmap" class="nav-link">Player Death Map</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Player Pie Chart</a>
@@ -85,7 +88,7 @@
 
 
 <!-- PLAYER BIRTH MAP -->
-    <div class="section-map1" id="section-map1"></div>
+    <div class="section-birthmap" id="section-birthmap"></div>
       <div id="map-holder">
         <div class="container padding">
           <div class="row justify-content-center padding">
@@ -99,7 +102,7 @@
 
 
 <!-- PLAYER DEATH MAP -->
-  <div class="section-map1" id="section-map1"></div>
+  <div class="section-deathmap" id="section-deathmap">
     <div id="map-holder">
       <div class="container padding">
         <div class="row justify-content-center padding">
@@ -111,27 +114,32 @@
   </div>
 
 <!-- PLAYER PIE CHART -->
-
+  <div class="section-pie" id="section-pie">
+  
+  </div>
 
 <!-- FOOTER -->
-  <div class="container-fluid padding">
-    <div class="row text-center">
-      <div class="col-12">
-        <footer>
-          <div class="footer">Copyright &copy; Baseball Group 2019</div>
-        </footer>
+  <div class="section-footer" id="section-footer">
+    <div class="container-fluid padding">
+      <div class="row text-center">
+        <div class="col-12">
+          <footer>
+            <div class="footer">Copyright &copy; Baseball Group 2019</div>
+          </footer>
+        </div>
       </div>
     </div>
   </div>
-
 
 <!-- CODE FOR LOADING CONTENT AS VIEWER SCROLLS DOWN PAGE -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script>
       window.sr = ScrollReveal({ duration : 1000 });
       sr.reveal('.section-1');
-      sr.reveal('.section-map1');
-      sr.reveal('.section-map2');
+      sr.reveal('.section-birthmap');
+      sr.reveal('.section-deathmap');      
+      sr.reveal('.section-pie');
+      sr.reveal('.section-footer');
     </script>
 
 <!-- Javascript -->
