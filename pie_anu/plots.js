@@ -1,80 +1,64 @@
+var rawDataURL = 'https://raw.githubusercontent.com/plotly/datasets/master/2016-weather-data-seattle.csv';
+var xField = 'Date';
+var yField = 'Mean_TemperatureC';
 
-results = {};
-// var keys1 = []
-// var values1 = []
-d3.csv("final.csv", function( error, playerData){
-    if (error) return console.warn(error);
-console.log("hello" + playerData)
-var country_name1 = playerData.map(data => data.country_name)
-const unique_countries = country_name1.filter(distinct);
-// bringing unique years
-var birthYear1 = playerData.map(data => data.birthYear)
-const unique_years = birthYear1.filter(distinct);
-
-var result = country_name1.reduce((a, c) => (a[c] = (a[c] || 0) + 1, a), Object.create(null));
-console.log(result);
-// const keys1 = Object.keys(result)
-// const values1 = Object.values(result)
-// console.log(result);
-
-// Plotly.newPlot("plots", data, layout);
-const keys1 = Object.keys(result)
-const values1 = Object.values(result)
-
-console.log(keys1);
-console.log(values1);
-var piep = {
-    type: 'pie',
-    labels: keys1,
-    values: values1
+var selectorOptions = {
+    buttons: [{
+        step: 'month',
+        stepmode: 'backward',
+        count: 1,
+        label: '1m'
+    }, {
+        step: 'month',
+        stepmode: 'backward',
+        count: 6,
+        label: '6m'
+    }, {
+        step: 'year',
+        stepmode: 'todate',
+        count: 1,
+        label: 'YTD'
+    }, {
+        step: 'year',
+        stepmode: 'backward',
+        count: 1,
+        label: '1y'
+    }, {
+        step: 'all',
+    }],
 };
 
-// slider part
-var layout = {
-    title: 'Time series with range slider and selectors',
-    xaxis: {
-        birthYear1: {}
-    },
-    yaxis: {
-        fixedrange: true
-    }
-};
-      
-        
-    var data = [piep];
+Plotly.d3.csv(rawDataURL, function(err, rawData) {
+    if(err) throw err;
 
-var layout = {
-      title: "'Baseball Players' Pie Chart Based on Countries' Chart",
+    var data = prepData(rawData);
+    var layout = {
+        title: 'Time series with range slider and selectors',
+        xaxis: {
+            rangeselector: selectorOptions,
+            rangeslider: {}
+        },
+        yaxis: {
+            fixedrange: true
+        }
     };
-  
-Plotly.newPlot("plots", data, layout);
 
+    Plotly.plot('plots', data, layout);
 });
 
-function prepData(playerData) {
-var x = [];
+function prepData(rawData) {
+    var x = [];
+    var y = [];
 
+    rawData.forEach(function(datum, i) {
 
-playerData.forEach(function(datum, i) {
+        x.push(new Date(datum[xField]));
+        y.push(datum[yField]);
+    });
 
-    x.push(new Date(datum[keys1]));
-    y.push(datum[values1]);
-});
-
-return [{
-    mode: 'lines',
-    x: x,
-    y: y
-}];
-};
-// console.log("Hey", results);
-
-
-abcc = function convert(values1) {
-    return{
-        value: +values1.value
-    };
+    return [{
+        mode: 'lines',
+        x: x,
+        y: y
+    }];
 }
-const distinct = (value, index, self) => {
-    return self.indexOf(value) === index;
-};
