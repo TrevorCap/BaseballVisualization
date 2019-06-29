@@ -1,3 +1,5 @@
+// WARNING!!! ---STOPPED USING THIS CODE FOR THE PROJECT---
+
 results = {};
 
 var keys1 = []
@@ -58,3 +60,4 @@ abcc = function convert(values1) {
 const distinct = (value, index, self) => {
     return self.indexOf(value) === index;
 };
+

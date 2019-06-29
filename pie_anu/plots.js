@@ -29,6 +29,30 @@ var piep = {
     values: values1
 };
 
+
+      
+        
+    var data = [piep];
+
+  
+Plotly.newPlot("plots", data, layout);
+
+});
+abcc = function convert(values1) {
+    return{
+        value: +values1.value
+    };
+}
+const distinct = (value, index, self) => {
+    return self.indexOf(value) === index;
+};
+
+
+
+
+
+
+
 // slider part
 var layout = {
     title: 'Time series with range slider and selectors',
@@ -39,18 +63,6 @@ var layout = {
         fixedrange: true
     }
 };
-      
-        
-    var data = [piep];
-
-var layout = {
-      title: "'Baseball Players' Pie Chart Based on Countries' Chart",
-    };
-  
-Plotly.newPlot("plots", data, layout);
-
-});
-
 function prepData(playerData) {
 var x = [];
 
@@ -70,11 +82,3 @@ return [{
 // console.log("Hey", results);
 
 
-abcc = function convert(values1) {
-    return{
-        value: +values1.value
-    };
-}
-const distinct = (value, index, self) => {
-    return self.indexOf(value) === index;
-};
