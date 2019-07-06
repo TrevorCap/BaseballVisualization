@@ -106,7 +106,7 @@ def stats_data():
     # Query for the necessary data
     results = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, 
         Baseball.BLat, Baseball.BLng, Baseball.birthCountry, Baseball.deathYear,
-        Baseball.birthCity, Baseball.Flag, Baseball.deathCity, Baseball.deathCountry).\
+        Baseball.birthCity, Baseball.Flag).\
         order_by(Baseball.birthYear.desc()).\
         limit(20000).all()
 
