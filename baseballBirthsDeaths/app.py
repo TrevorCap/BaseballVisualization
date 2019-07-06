@@ -69,7 +69,7 @@ class Baseball(db.Model):
     birthYear = db.Column(db.Integer)
     nameFirst = db.Column(db.String)
     nameLast = db.Column(db.String)
-    BLng = db.Column(db.Float)
+    BLat = db.Column(db.Float)
     BLng = db.Column(db.Float)
     birthCountry = db.Column(db.String)
     deathYear = db.Column(db.Integer)
