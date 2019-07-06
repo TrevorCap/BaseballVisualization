@@ -18,7 +18,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # The database URI
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/baseball.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/data.sqlite"
 app.config['SQLALCHEMY_BINDS'] = {
     "combined_db":"sqlite:///db/baseballDeath.sqlite",
     "combined_db2":"sqlite:///db/graphdb.sqlite"
@@ -63,20 +63,20 @@ class BaseballDeath(db.Model):
         return '<BaseballDeath %r>' % (self.name)
 
 class Baseball(db.Model):
-    __tablename__ = 'final'
+    __tablename__ = 'deploy1'
 
     id = db.Column(db.Integer, primary_key=True)
     birthYear = db.Column(db.Integer)
     nameFirst = db.Column(db.String)
     nameLast = db.Column(db.String)
-    latitude = db.Column(db.Float)
-    longitude = db.Column(db.Float)
-    country_iso_code = db.Column(db.String)
+    BLng = db.Column(db.Float)
+    BLng = db.Column(db.Float)
+    birthCountry = db.Column(db.String)
     deathYear = db.Column(db.Integer)
     birthCity = db.Column(db.String)
-    flags = db.Column(db.String)
-    deathCity = db.Column(db.String)
-    deathCountry = db.Column(db.String)
+    Flag = db.Column(db.String)
+    # deathCity = db.Column(db.String)
+    # deathCountry = db.Column(db.String)
     
 
     def __repr__(self):
@@ -105,8 +105,8 @@ def stats_data():
     #match return (result) with original csv to see if everything will print
     # Query for the necessary data
     results = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, 
-        Baseball.latitude, Baseball.longitude, Baseball.country_iso_code, Baseball.deathYear,
-        Baseball.birthCity, Baseball.flags, Baseball.deathCity, Baseball.deathCountry).\
+        Baseball.BLat, Baseball.BLng, Baseball.birthCountry, Baseball.deathYear,
+        Baseball.birthCity, Baseball.Flag, Baseball.deathCity, Baseball.deathCountry).\
         order_by(Baseball.birthYear.desc()).\
         limit(20000).all()
 
@@ -114,12 +114,12 @@ def stats_data():
     nameLast = [result[0] for result in results]
     birthYear = [result[1] for result in results]
     nameFirst = [result[2] for result in results]
-    latitude = [result[3] for result in results]
-    longitude = [result[4] for result in results]
-    country_iso_code = [result[5] for result in results]
+    BLat = [result[3] for result in results]
+    BLng = [result[4] for result in results]
+    birthCountry = [result[5] for result in results]
     deathYear = [result[6] for result in results]
     birthCity = [result[7] for result in results]
-    flags = [result[8] for result in results]
+    Flag = [result[8] for result in results]
     deathCity = [result[9] for result in results]
     deathCountry = [result[10] for result in results]
     # print(nameLast)
