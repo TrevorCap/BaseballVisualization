@@ -9,8 +9,8 @@ d3.json("/birthYear", function(error, playerData) {
   
     //Cast each hours value in tvData as a number using the unary + operator
     playerData.forEach(function(data) {
-      data.latitude = +data.latitude;
-      data.longitude = +data.longitude;
+      data.latitude = +data.BLat;
+      data.longitude = +data.BLng;
     //console.log("Latitude:", data.latitude, "Longitude:", data.longitude);
       //console.log("Longitude", data.longitude);
     });
