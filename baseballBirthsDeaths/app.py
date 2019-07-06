@@ -122,9 +122,9 @@ def stats_data():
     Flag = [result[8] for result in results]
     # deathCity = [result[9] for result in results]
     # deathCountry = [result[10] for result in results]
-    print(nameLast)
-    print(latitude)
-    print(longitude)
+    # print(nameLast)
+    # print(latitude)
+    # print(longitude)
     
     # baseball_dict = {
     #     "nameLast": nameLast, "birthYear": birthYear, "latitude": latitude, 
