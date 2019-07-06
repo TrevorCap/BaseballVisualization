@@ -120,8 +120,8 @@ def stats_data():
     deathYear = [result[6] for result in results]
     birthCity = [result[7] for result in results]
     Flag = [result[8] for result in results]
-    deathCity = [result[9] for result in results]
-    deathCountry = [result[10] for result in results]
+    # deathCity = [result[9] for result in results]
+    # deathCountry = [result[10] for result in results]
     # print(nameLast)
     # print(latitude)
     # print(longitude)
