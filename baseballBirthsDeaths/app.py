@@ -108,7 +108,7 @@ def stats_data():
         Baseball.BLat, Baseball.BLng, Baseball.birthCountry, Baseball.deathYear,
         Baseball.birthCity, Baseball.Flag).\
         order_by(Baseball.birthYear.desc()).\
-        limit(20000).all()
+        filter(Baseball.BLat != '').all()
 
     # Create lists from the query results
     nameLast = [result[0] for result in results]

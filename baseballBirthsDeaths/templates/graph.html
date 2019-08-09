@@ -58,7 +58,7 @@
             <a href="/#section-birthmap" class="nav-link">Player Birth Map</a>
           </li>
           <li class="nav-item">
-            <a href="/deathmap" class="nav-link">Player Death Map</a>
+            <a href="/#section-deathmap" class="nav-link">Player Death Map</a>
           </li>
           <li class="nav-item">
             <a href="/#section-chart" class="nav-link">Player Chart</a>
@@ -77,31 +77,11 @@
       <div class="container-fluid jumbotron padding">
         <div class="row welcome text-center padding">
           <div class="col-12">
-            <p class="lead">Welcome to my collection of baseball stats and visualizations! First you will find two interactive maps for the birth and deathplace of every player in major league history and a time-lapse player size chart that
-              help visualize how baseball players have changed in size by position over time. </p>
-          </div>
-          <div class="col-12">
-            <p class="lead">The hope of this website is to allow the viewer to visually demonstrate both the concentration and the spread of baseball as a global sport over time.</p>
+            <p class="lead">This map shows the locations of every player's recorded deathplace.</p>
           </div>
         </div>
       </div>
     </div>
-
-
-
-<!-- PLAYER BIRTH MAP -->
-    <div class="section-birthmap" id="section-birthmap"></div>
-      <div id="map-holder">
-        <div class="container padding">
-          <div class="row justify-content-center padding">
-            <h1>Player Birth Map</h1>   
-            <div id="map"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
 
 <!-- PLAYER DEATH MAP -->
   <div class="section-deathmap" id="section-deathmap">
@@ -114,22 +94,6 @@
       </div>
     </div>
   </div>
-
-
-
-<!-- PLAYER CHART -->
-  <div class="section-chart" id="section-chart">
-    <div id="chart-holder">
-      <div class="container padding">
-        <div class="row justify-content-center">
-          <h1>Player Size Chart</h1>   
-          <div id="graph"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 
 <!-- FOOTER -->
   <div class="section-footer" id="section-footer">
@@ -149,7 +113,6 @@
     <script>
       window.sr = ScrollReveal({ duration : 1000 });
       sr.reveal('.section-1');
-      sr.reveal('.section-birthmap');
       sr.reveal('.section-deathmap');      
       sr.reveal('.section-chart');
       sr.reveal('.section-footer');
