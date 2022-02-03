@@ -21,7 +21,8 @@ var myMap = L.map("map", {
     //center: [42.7006, -74.9243], changed these for initial positioning in map.
     // center: [.9631, 19.0208],
     center: [.9631, 19.0208],
-    zoom: 2.48
+    zoom: 2.48,
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
     });
   
 //   // Adding tile layer to the map
@@ -40,6 +41,8 @@ var myMap = L.map("map", {
      id: 'mapbox/streets-v11',
      accessToken: 'API_KEY'
  }).addTo(myMap); 
+    
+     
  
  
   
