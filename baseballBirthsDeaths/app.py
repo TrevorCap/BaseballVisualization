@@ -1,18 +1,4 @@
-import os
-import numpy as np
-import pandas as pd
-
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func, inspect, desc
-
-from flask import (
-    Flask,
-    render_template,
-    jsonify,
-    redirect)
-
+from flask import Flask, render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
